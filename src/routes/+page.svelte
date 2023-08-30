@@ -1,18 +1,11 @@
 <script>
+	import Blink from '$lib/components/Blink.svelte';
 	import Icon from '@iconify/svelte';
 </script>
 
-<svelte:head>
-	<meta name="description" content="Software Engineer" />
-	<meta property="og:title" content="Paulo" />
-	<meta property="og:description" content="Software Engineer" />
-
-	<title>Paulo</title>
-</svelte:head>
-
 <main>
 	<h1>Paulo Eduardo Faversani</h1>
-	<h2>Software Engineer<span class="blink">.</span></h2>
+	<h2>Software Engineer<Blink>.</Blink></h2>
 
 	<div id="links-group">
 		<a href="https://github.com/pauloo27" target="_blank" rel="noopener noreferrer">
@@ -78,16 +71,6 @@
 	a:hover {
 		color: #1a1a1a;
 		background-color: #c0ffee;
-	}
-
-	.blink {
-		animation: blinker 3s linear infinite;
-	}
-
-	@keyframes blinker {
-		50% {
-			opacity: 0;
-		}
 	}
 
 	@media (max-width: 768px) {

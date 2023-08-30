@@ -1,0 +1,15 @@
+<span class="blink">
+	<slot />
+</span>
+
+<style>
+	.blink {
+		animation: blinker 3s linear infinite;
+	}
+
+	@keyframes blinker {
+		50% {
+			opacity: 0;
+		}
+	}
+</style>
