@@ -68,7 +68,8 @@
 		gap: 5px;
 	}
 
-	a:hover {
+	a:hover,
+	a:focus {
 		color: #1a1a1a;
 		background-color: #c0ffee;
 	}
