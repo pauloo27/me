@@ -1,11 +1,17 @@
 <script>
-	import Blink from '$lib/components/Blink.svelte';
+	import Canvas from '$lib/components/Canvas.svelte';
 	import Icon from '@iconify/svelte';
+
+	const isSSR = typeof window === 'undefined';
 </script>
+
+{#if !isSSR}
+	<Canvas />
+{/if}
 
 <main>
 	<h1>Paulo Eduardo Faversani</h1>
-	<h2>Software Engineer<Blink>.</Blink></h2>
+	<h2>Software Engineer</h2>
 
 	<div id="links-group">
 		<a href="https://github.com/pauloo27" target="_blank" rel="noopener noreferrer">
@@ -27,8 +33,8 @@
 	main {
 		height: 100vh;
 		width: 100vw;
+		background: transparent;
 
-		background-color: #212121;
 		text-align: center;
 
 		padding: 100px;
@@ -41,21 +47,26 @@
 		align-items: center;
 	}
 
-	h1 {
-		color: #c0ffee;
-		font-size: 3.5rem;
-	}
-
+	h1,
 	h2 {
 		background-color: #c0ffee;
 		color: #1a1a1a;
 		padding: 5px;
+	}
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	h2 {
 		font-size: 2.5rem;
 	}
 
 	#links-group {
 		display: flex;
 		flex-direction: column;
+		background-color: rgba(26, 26, 26, 0.8);
+		padding: 20px;
+		border-radius: 10px;
 	}
 
 	a {
@@ -66,6 +77,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 5px;
+		font-weight: bold;
 	}
 
 	a:hover {

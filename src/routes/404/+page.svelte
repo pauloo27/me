@@ -1,9 +1,5 @@
-<script>
-	import Blink from '$lib/components/Blink.svelte';
-</script>
-
 <main>
-	<h2>Not found<Blink>.</Blink></h2>
+	<h2>Not found.</h2>
 </main>
 
 <style>
