@@ -47,5 +47,5 @@ jobs:
         uses: https://code.db.cafe/actions/k7z-rollout@master
         with:
           base_url: https://k7z.db.cafe
-          project_id: naga-www
+          project_id: me
           secret: ${{ secrets.K7Z_SECRET }}
