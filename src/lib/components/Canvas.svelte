@@ -1,21 +1,37 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+		navigator.userAgent
+	);
 
 	let context: CanvasRenderingContext2D | null;
 	let counter = 0;
 
-	const draw = (e: MouseEvent) => {
+	const draw = (e: MouseEvent | TouchEvent) => {
 		if (!context) return;
 		counter++;
 
-		context.lineTo(e.clientX, e.clientY);
+		let x, y;
+
+		if (e instanceof MouseEvent) {
+			x = e.clientX;
+			y = e.clientY;
+		} else {
+			x = e.touches[0].clientX;
+			y = e.touches[0].clientY;
+		}
+
+		context.lineTo(x, y);
+		context.lineWidth = 3.21;
 		context.strokeStyle = `hsl(${counter / 10}, 100%, 50%)`;
 		context.stroke();
 	};
 
 	onMount(() => {
 		const body = document.querySelector('body')!;
-		body.onmousemove = draw;
+
+		if (isMobile) body.ontouchmove = draw;
+		else body.onmousemove = draw;
 
 		const canvas = document.getElementById('canvas') as HTMLCanvasElement;
 
@@ -29,7 +45,6 @@
 		resize();
 
 		context = canvas.getContext('2d')!;
-		context.lineWidth = 3.21;
 		context.lineJoin = 'round';
 		context.lineCap = 'round';
 	});
