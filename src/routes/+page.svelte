@@ -39,7 +39,7 @@
 
 		padding: 100px;
 
-		gap: 20px;
+		gap: 55px;
 
 		display: flex;
 		flex-direction: column;
@@ -51,8 +51,10 @@
 	h2 {
 		background-color: #c0ffee;
 		color: #1a1a1a;
-		padding: 5px;
+		padding: 10px 20px;
+		border-radius: 10px;
 	}
+
 	h1 {
 		font-size: 3.5rem;
 	}
