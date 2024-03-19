@@ -1,9 +1,10 @@
 FROM node:16 AS builder
+RUN corepack enable pnpm
 
 WORKDIR /app
 COPY . .
-RUN yarn install
-RUN yarn build
+RUN pnpm install
+RUN pnpm build
 
 FROM code.db.cafe/pauloo27/garcom:latest
 WORKDIR /app
