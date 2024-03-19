@@ -1,13 +1,6 @@
 <script>
-	import Canvas from '$lib/components/Canvas.svelte';
 	import Icon from '@iconify/svelte';
-
-	const isSSR = typeof window === 'undefined';
 </script>
-
-{#if !isSSR}
-	<Canvas />
-{/if}
 
 <main>
 	<h1>Paulo Eduardo Faversani</h1>
