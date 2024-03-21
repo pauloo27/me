@@ -5,6 +5,10 @@ let currentTheme = 'dark';
 export function loadTheme() {
 	const darkModePreference = window.matchMedia('(prefers-color-scheme: dark)');
 	applyTheme(darkModePreference.matches ? 'dark' : 'light');
+
+	darkModePreference.addEventListener('change', (event) => {
+		applyTheme(event.matches ? 'dark' : 'light');
+	});
 }
 
 export function applyTheme(theme: Theme) {
