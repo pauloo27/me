@@ -5,6 +5,7 @@
 <header>
 	<nav>
 		<a href="/">Home</a>
+		<a rel="noopener noreferrer" target="_blank" href="https://faze.ndo.cafe">Blog</a>
 		<a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/paulofaversani/">
 			Linkedin
 		</a>

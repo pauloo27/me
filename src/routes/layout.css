@@ -25,7 +25,7 @@ body {
 body.light {
 	--background: #ffffff;
 	--foreground: #030712;
-	--accent-foreground: #79b9b9;
+	--accent-foreground: #63A194;
 	--card: #ffffff;
 	--card-foreground: #030712;
 	--primary: #111827;
@@ -38,6 +38,7 @@ body.light {
 	--input: #e5e7eb;
 	--link: #111827;
 }
+
 
 body {
 	color-scheme: dark light;
