@@ -40,7 +40,7 @@
 </header>
 
 <header id="minimal">
-	<div id="minimal-buttons">
+	<div id="minimal-button-group">
 		<button on:click={() => (isMenuOpen = !isMenuOpen)}><i class="bx bx-menu" /></button>
 		<button on:click={toggleTheme}><i class="bx bx-bulb" /></button>
 	</div>
@@ -71,9 +71,13 @@
 		flex-direction: column;
 	}
 
-	#minimal-buttons {
+	#minimal-button-group {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	#minimal-button-group > button {
+		font-size: 1rem;
 	}
 
 	nav {
